@@ -13,7 +13,7 @@ void World::run(){
 	const string application_name = "Spaaace";													//set app name
 	const int DISPLAY_WIDTH = 1080;																//set display size
 	const int DISPLAY_HEIGHT = 720;
-	const double SPAWN_TIME = 4;																//set spawntime for enemies
+	const double SPAWN_TIME = 2;																//set spawntime for enemies
 	const double BOOM_DELAY = 0.5;																//Interval between shots
 
 
@@ -52,6 +52,7 @@ void World::run(){
 	delete ship;
 	objects.erase(objects.begin(), objects.end());
 	
+	
 	//VGCClock::closeTimer(boom_delay);
 	VGCClock::closeTimer(spawn_timer);		
 	VGCVirtualGameConsole::finalize();
@@ -79,11 +80,12 @@ void World::update() {
      		delete *it;
 			it = objects.erase(it);
 
-			if ((obj_cat != 4) && obj_fren == true) {
+			if ((obj_cat != 4 || obj_cat != 0) && !obj_fren) {
 
 			Explosion *explosion = new Explosion(obj_position, obj_fren);
 			boom.push_back(explosion);
 			}
+			
 
 			
 		}
@@ -95,7 +97,7 @@ void World::update() {
 	for (auto explosion : boom) {
 		objects.push_back(explosion);
 	}
-
+	boom.erase(boom.begin(), boom.end());
 	collision_detect();
 }
 //////////////////////////////////////////////////////////////////////////////////////////////

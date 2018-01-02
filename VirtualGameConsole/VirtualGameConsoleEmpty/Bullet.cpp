@@ -53,8 +53,8 @@ void Bullet::move()																				//set movement according to what object c
 	}  
 	if (position.getY() < -50 || position.getY() > 770 || position.getX() < -50 || position.getX() > 1130) {	//if out of bounds, kill the bullet
 		// Object::die();
-		this->die();
-		// VGCDisplay::closeImage(spr_bullet);
+		Object::die();
+		VGCDisplay::closeImage(spr_bullet);
 	}
 }
 //////////////////////////////////////////////////////////////////////////////////////////////
