@@ -1,0 +1,26 @@
+﻿  VGCWindow.cpp
+  VGCVirtualGameConsole.cpp
+  VGCVector.cpp
+  VGCTimerImp.cpp
+  VGCReferenced.cpp
+  VGCRectangle.cpp
+  VGCRandomizer.cpp
+  VGCMessage.cpp
+  VGCKeyboard.cpp
+  VGCKey.cpp
+  VGCImageImp.cpp
+  VGCHandler.cpp
+  VGCGDIPlus.cpp
+  VGCFontImp.cpp
+  VGCError.cpp
+  VGCDisplay.cpp
+  VGCColor.cpp
+  VGCClock.cpp
+  VGCBus.cpp
+  VGCBootstrap.cpp
+  Generating Code...
+  Compiling...
+  VGCAssert.cpp
+  VGCAdjustment.cpp
+  Generating Code...
+  VirtualGameConsole.vcxproj -> C:\Users\sebbe\Documents\GitHub\Haaaaalp\VirtualGameConsole\VirtualGameConsole\Debug\VirtualGameConsole.lib
